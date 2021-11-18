@@ -1,0 +1,518 @@
+:root {
+    --fondo:#aee8ff;
+    --horizontal-cuarto: #46565C;
+    --volcan: #571a0d;
+    --volcan2: #43261C;
+    --carretera:#525251;
+    --border-casa1:#FFDCDC;
+
+}
+.canva {
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    background-color:var(--fondo);
+    border: 1px solid black;
+    width:90%;
+    height:90vh;
+    border-radius: 45px;
+}
+
+.carretera {
+    z-index:11;
+    height: 11%;
+    width:100%;
+    background-color:var(--carretera);
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+.carretera .line {
+    width:100%;
+    height:1vh;
+    background-color: white
+}
+.volcanes {
+    width:100%;
+    z-index: 1;
+    bottom: 11%;
+    position:absolute;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    align-items: end;
+}
+.volcan:nth-of-type(1) {
+    width:0;
+    height:0;
+    border-left: 45vh solid transparent;
+    border-right: 45vh solid transparent;
+    border-bottom: 60vh solid var(--volcan);
+}
+.volcan:nth-of-type(2) {
+    margin-left:-30vh;
+    width: 0;
+    height:0;
+    border-left:20vh solid transparent;
+    border-right: 20vh solid transparent;
+    border-bottom: 45vh solid var(--volcan2)
+    
+}
+.volcan:nth-of-type(3){
+    width:0;
+    height:0;
+    border-left: 30vh solid transparent;
+    border-right: 30vh solid transparent;
+    border-bottom: 60vh solid var(--volcan)
+}
+.canva> .casas {
+    z-index: 5;
+    height:80vh;
+    align-self: end;
+    border: 1px solid black;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.casa {
+    width:25vh;
+    align-self: end;
+    display:flex;
+    flex-direction: column;
+}
+/* --------CASA 1 ----------------- */
+.casa:nth-of-type(1){
+    height:350px;
+    margin-left: 6%;
+    display: flex;
+    justify-content:end;
+    border: none;
+}
+.casa:nth-of-type(1)  div{
+    
+}
+.casa:nth-of-type(1) .techo {
+    position:fixed;
+    bottom:35vh;
+    width:150px;
+    transform: rotate(135deg);
+    height:150px;
+    border-bottom: 5vh solid var(--border-casa1);
+    border-left: 5vh solid var(--border-casa1);
+    /* border: 1px solid rgb(173, 27, 27); */
+}
+.casa:nth-of-type(1) .cuarto:not(.casa:nth-of-type(1) .cuarto:nth-of-type(1)) {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    background-color: #FC7C7C;
+}
+.casa:nth-of-type(1) .cuarto:nth-of-type(1) {
+    height:0;
+    width:0;
+    border-left:12vh solid transparent;
+    border-right: 12vh solid transparent;
+    border-bottom: 13vh solid #FC7C7C;
+}
+.casa:nth-of-type(1) .cuarto:nth-of-type(3) {
+    border-top: 10px solid var(--border-casa1);
+    border-bottom: 10px solid rgb(82, 40, 40);
+    border-top:2vh solid var(--border-casa1);
+}
+.casa:nth-of-type(1) .cuarto:nth-of-type(3) .entrada {
+    align-self:center;
+    justify-self: end;
+    width: 35%;
+    height:70%;
+    display: flex;
+    flex-direction: column;
+}
+.casa:nth-of-type(1) .cuarto:nth-of-type(3) .puerta {
+    border-radius: 45px 45px 0 0;
+    border:0.8vh solid var(--border-casa1);
+    flex: 2;
+    
+}
+.casa:nth-of-type(1)  .gradas {
+    flex:1;
+    border: 1px solid black;
+}
+.casa:nth-of-type(1) .cuarto:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+}
+.casa:nth-of-type(1) .cuarto:nth-of-type(2) .ventanas {
+    width: 90%;
+    height:45%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.casa:nth-of-type(1) .cuarto:nth-of-type(2) .ventanas .ventana {
+    width:30%;
+    border-radius: 50% 50% 0 0;
+    height:100%;
+    background-color:#EEB2B2;
+    border: 1px solid rgb(245, 238, 238);
+}
+
+
+ /* -------------- CASA 2 ---------------- */
+.casa:nth-of-type(2){
+    border:none;
+    display:flex;
+    flex-direction: column;
+    justify-content:end;
+    margin-right: 15vh;
+}
+.casa:nth-of-type(2) .techo {
+    align-self: center;
+    height:13vh;
+    margin-bottom: -5px;
+    width:150%;
+    display: flex;
+    position:relative;
+}
+.casa:nth-of-type(2) .techo .losa{
+    background-color: white;
+    border-radius: 45px;
+    flex: 1;
+    width:10px;
+    height:100%;
+
+}
+.casa:nth-of-type(2) .techo .losa:hover{
+    background-color:#0D3749;
+    transform: scale(1.3, 1.3);
+    transition: transform 0.3s;
+    
+}
+.casa:nth-of-type(2)  .losa:nth-of-type(2),
+.casa:nth-of-type(2)  .losa:nth-of-type(4),
+.casa:nth-of-type(2)  .losa:nth-of-type(6)
+{
+    background-color: #70CFF9;
+}
+.casa:nth-of-type(2) .cuarto {
+    height:14vh;
+    background-color: #0D3749;
+    width:100%;
+    display: flex;
+    justify-content:center;
+}
+.casa:nth-of-type(2) .cuarto .ventanas {
+    margin-top: 15px;
+    width:90%;
+    height:40%;
+    display: flex;
+    justify-content: space-between;
+}
+.casa:nth-of-type(2) .cuarto .ventanas .ventana {
+    background-color: #325667;
+    border:2px solid #82a4b4;
+    width: 25%;
+    height:100%;
+
+}
+/* -------------------------- CASA 3 */
+
+.casa:nth-of-type(3){
+    width:120px;
+    right:10vh;
+    position:relative;
+    display:flex;
+    justify-content:end;
+    align-items: center;
+}
+.atras {
+    position:relative;
+    left:15vh;
+    top:24vh;
+    justify-self: start;
+
+    border: 1px solid rgb(230, 15, 15);
+    width: 20vh;
+    height:10vh;
+    background-color:#BD6244;
+    /* border-left: 5vh solid transparent;
+    border-right: 5vh solid transparent;
+    border-bottom:18vh solid #BD6244; */
+}
+.chimenea {
+    width: 5vh;
+    height:50px;
+    position:relative;
+    z-index:2;
+    background-color:#FC8D6B;
+    top: 13vh;
+    right:8vh;
+}
+.casa:nth-of-type(3) .techo {
+    position:relative;
+    top: 11vh;
+    z-index:5;
+    align-self: center;
+    /* background-color:#F9704B; */
+    height:0;
+    width:30vh;
+    border-right: 5vh solid transparent;
+    border-left: 5vh solid transparent;
+    border-bottom: 8vh solid #fa704a;
+}
+
+.casa:nth-of-type(3) >.cuarto:not(.atras){
+    background-color: #FC8D6B;
+    width:24vh;
+    height:24vh;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    border-bottom: 10px solid  rgb(82. 40, 40)
+}
+.casa:nth-of-type(3) .cuarto .puerta {
+    width: 50%;
+    height: 50%;
+    align-self:center;
+    display: flex;
+
+    flex-direction: column;
+}
+.casa:nth-of-type(3) .cuarto .puerta span {
+    flex:1;
+    border: 3px solid rgb(255, 255, 255);
+}
+.casa:nth-of-type(3) .cuarto .ventanas {
+    align-self: center;
+    margin-top:10px;
+    width:80%;
+    height:25px;
+    display:flex;
+    justify-content: space-between;
+}
+.casa:nth-of-type(3) .cuarto .ventana {
+    align-self: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width:6vh;
+    height:8vh;
+}
+.casa:nth-of-type(3) .cuarto .ventana span {
+    flex:1;
+    border: 2px solid #fa4513;
+}
+/* ------------- CASA 4 */
+.casa:nth-of-type(4){
+    margin-right:20vh;
+    width:15vh;
+}
+
+
+.casa:nth-of-type(4) .cuarto{
+    height:20vh;
+    display:flex;
+    border-bottom: 10px solid var(--horizontal-cuarto);
+    align-items: center;
+    justify-content: center;
+    background-color: #64A6C3;
+}
+.casa:nth-of-type(4) .cuarto:nth-of-type(1){
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-left: 12vh solid transparent;
+    border-right: 12vh solid transparent;
+    border-bottom: 15vh solid gray;
+    align-self: center;
+}
+.casa:nth-of-type(4) .reloj {
+    justify-self: center;
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    border: 4px solid rgba(97, 94, 94, 0.699);
+    background-color:#B2DDE3;
+}
+.casa:nth-of-type(4) .arco {
+    border-radius: 45% 45% 0 0;
+    background-color:#89BBC3
+}
+.casa:nth-of-type(4) .puerta {
+    border: 1px solid rgb(82, 81, 81);
+    align-self:end;
+    width:60%;
+    height:60%;
+    display:flex;
+    flex-direction: row;
+}
+.casa:nth-of-type(4) .cuarto:nth-of-type(4) .puerta span {
+    flex: 1;
+    border: 1px solid black;
+}
+.casa:nth-of-type(4) .ventana {
+    border: 3px solid rgb(24, 22, 22);
+    width:40%;
+    height:50%;
+    display:flex;
+    justify-content:center
+}
+
+.casa:nth-of-type(4) .ventana .line {
+    border: 1px solid rgb(7, 7, 7);
+}
+.casa:nth-of-type(4) .ventana .line:first-of-type{
+    align-self: center;
+    height:40px;
+    transform: rotate(90deg);
+}
+
+/* ------- NUBES */
+
+.nube{
+    z-index:10;
+    position:absolute;
+    width: 40vh;
+    height:28vh;
+    display:flex;
+    flex-flow: row wrap;
+    transition: transform 2s;
+}
+.nube span {
+    width:48%;
+    position:relative;
+    height: 48%;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 2s;
+}
+.nube span:hover {
+    transform: scale(1.3, 1.3);
+    box-shadow: 10px 0px rgba(109, 100, 100, 0.212);
+}
+
+.nube:nth-of-type(1){
+    transform: translate(70vh, 50%);
+    
+}
+.nube span:nth-of-type(1){
+    left:5vh;
+    top:3vh;
+}
+.nube span:nth-of-type(3){
+    left:3vh;
+    bottom:3vh;
+}
+.nube span:nth-of-type(4){
+    right:3vh;
+    bottom:3vh;
+}
+.nube:nth-of-type(2){
+    transform: translate(105vh, 10%);
+}
+.nube:nth-of-type(3){
+    transform: translate(10vh, 10%);
+}
+
+.adornos{
+    width:100%;
+    height:90vh;
+    position:absolute;
+    display:flex;
+    align-items:end;
+    bottom:6%;
+}
+.adorno {
+    flex: 1;
+    z-index:15;
+    width:15vh;
+    height:40vh;
+    display:flex;
+    z-index:1;
+    justify-content: end;
+}
+
+.bosque {
+    align-self:end;
+    width: 53%;
+    height:80%;
+    display:flex;
+    flex-direction:row;
+    align-items:end;
+}
+.bosque:nth-of-type(3){
+    margin-left: 12vh;
+}
+/* palos */
+
+.adorno:nth-of-type(1) {
+    justify-content: start;
+}
+.adorno:nth-of-type(2) {
+    justify-content: start;
+}
+.adorno:nth-of-type(3) {
+    justify-content: center;
+}
+
+
+.bosque span:nth-of-type(1){
+    width:2vh;
+    height:60%;
+    background-color:#571a0d;
+    position: relative;
+    left: 6vh;
+}
+.bosque span:nth-of-type(2){
+    z-index:10;
+    width:0;
+    height:0;
+    float:left;
+    border-left: 5vh solid transparent;
+    border-right: 5vh solid transparent;
+    border-bottom: 20vh solid green;
+    margin-bottom: 14vh;
+    left: 5vh;
+}
+
+.bosque span:nth-of-type(3),
+.bosque span:nth-of-type(4),
+.bosque span:nth-of-type(5)
+{
+    position:absolute;
+    width:3%;
+    display:inline-block;
+    height: 13vh;
+    border-radius: 50%;
+    background-color: rgb(104, 219, 104);
+    margin-top: calc(13% + 1px);
+} 
+.bosque span:nth-of-type(3)
+{
+    margin-left:1vh;
+} 
+.bosque span:nth-of-type(4)
+{
+    margin-left:5vh;
+} 
+.bosque span:nth-of-type(5){
+    margin-left:10vh;
+}
+/* .monte{
+    flex:1;
+    position: relative;
+    width:100%;
+    height:20vh;
+    border: 1px solid black;
+    display:flex;
+}
+ .monte span
+{
+   flex:1;
+   border: 1px solid black;
+   background-color:white;
+} */

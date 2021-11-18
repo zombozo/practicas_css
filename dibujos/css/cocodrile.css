@@ -1,0 +1,464 @@
+:root {
+    --piel: #4E7D16;
+    --ojos: #779108;
+    --piel-extra: #F5D266;
+    --crestas: #103C19;
+}
+
+body {
+    background-color: aquamarine;
+}
+
+.wraper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    justify-content: center;
+}
+
+.fondo {
+    border-radius: 15%;
+    width: 600px;
+    height: 600px;
+    background-color: black;
+    align-self: center;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    background-color: white;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.cocodrile {
+    align-items: center;
+    display: flex;
+    height: 330px;
+    justify-content: center;
+}
+
+
+/* CABEZA */
+
+.craneo {
+    position: absolute;
+    background-color: var(--piel);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 50px;
+    align-self: center;
+    z-index: 10;
+}
+
+.cabeza {
+    align-self: start;
+    justify-self: center;
+    margin-right: -40px;
+}
+
+
+/* OJOS */
+
+.ojos {
+    display: flex;
+    margin-left: -12px;
+}
+
+.ojo {
+    background-color: var(--ojos);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: -7px;
+    display: flex;
+}
+
+.ojo:first-child {
+    margin-right: -7px;
+}
+
+.blanco {
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    align-self: center;
+    display: flex;
+    justify-content: end;
+}
+
+.iris {
+    background-color: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    align-self: end;
+    margin-bottom: 3px;
+    margin-right: 3px;
+}
+
+.brillo {
+    background-color: white;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin-top: 1px;
+}
+
+
+/* FRESTAS  */
+
+.crestas {
+    position: relative;
+    z-index: 1;
+}
+
+.cresta {
+    position: relative;
+    background-color: var(--crestas);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.cresta:nth-child(1) {
+    top: 30px;
+    left: 33px;
+    z-index: 1;
+}
+
+.cresta:nth-of-type(2) {
+    top: 20px;
+    right: -60px;
+    z-index: 1;
+}
+
+.cresta:nth-child(3) {
+    bottom: -20px;
+    right: -70px;
+    z-index: 1;
+}
+
+
+/* OCICO */
+
+.ocico {
+    margin-left: -50px;
+    transform: rotate(350deg);
+}
+
+.quijada {
+    width: 100px;
+    height: 40px;
+    border-radius: 45px;
+    display: flex;
+    position: absolute;
+}
+
+.quijada:nth-child(1) {
+    background-color: var(--piel);
+    z-index: 2;
+}
+
+.dientes {
+    z-index: 20;
+    align-self: end;
+    width: 80%;
+    height: 10px;
+    display: flex;
+    margin-bottom: -10px;
+    margin-left: 20px;
+}
+
+.diente {
+    /* flex: 1; */
+    width: 0px;
+    height: 0;
+    border-top: 10px solid white;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.quijada:nth-child(2) {
+    background-color: var(--piel-extra);
+    top: 20px;
+    left: 10px;
+    height: 32px;
+    z-index: 1;
+}
+
+.nariz {
+    position: fixed;
+    display: flex;
+    margin-left: -8px;
+    transform: rotate(195deg);
+    margin-top: -5px;
+}
+
+.fosa {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--ojos);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.huequito {
+    background-color: var(--crestas);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+
+/* CUERPO */
+
+.cuerpo {
+    position: absolute;
+    width: 18vh;
+    border-radius: 50% 50% 45% 45%;
+    background-color: var(--piel);
+    height: 30vh;
+    margin-left: 80px;
+    top: 240px;
+    display: flex;
+    justify-content: center;
+    z-index: 9
+}
+
+.panza {
+    position: absolute;
+    margin-top: 20px;
+    border-radius: 50% 50% 45% 45%;
+    background-color: var(--piel-extra);
+    width: 12vh;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+}
+
+.raya {
+    justify-self: center;
+    width: 20px;
+    border-bottom: 4px solid #000;
+    height: 10px;
+    position: fixed;
+    /* border-color: transparent transparent #000 transparent; */
+    border-radius: 50%;
+    transform: scale(2, 1.5);
+}
+
+.raya:nth-of-type(1) {
+    margin-top: 10px;
+}
+
+.raya:nth-of-type(2) {
+    margin-top: 30px;
+    width: 28px
+}
+
+.raya:nth-of-type(3) {
+    margin-top: 50px;
+    width: 32px
+}
+
+.raya:nth-of-type(4) {
+    margin-top: 70px;
+    width: 34px
+}
+
+.raya:nth-of-type(5) {
+    margin-top: 90px;
+    width: 30px
+}
+
+.raya:nth-of-type(6) {
+    margin-top: 110px;
+    width: 30px
+}
+
+.cola {
+    z-index: 1;
+}
+
+.cola>div {
+    position: absolute;
+    top: 280px;
+    width: 200px;
+    height: 100px;
+    border-radius: 50%;
+    border-bottom: 40px solid #000;
+    transform: rotate(0.06turn);
+}
+
+
+/* CRESTAS DE LA COLA */
+
+.cola>.crestas {
+    position: absolute;
+    z-index: 1;
+    width: 45%;
+    margin-top: 90px;
+}
+
+.cola>.crestas>.cresta {
+    right: 0;
+    left: 0;
+    background-color: var(--crestas);
+    display: inline-block;
+}
+
+.cola>.crestas>.cresta:nth-of-type(1) {
+    top: -42px;
+    left: 65px;
+}
+
+.cola>.crestas>.cresta:nth-of-type(2) {
+    top: -25px;
+    left: 50px;
+}
+
+.cola>.crestas>.cresta:nth-of-type(3) {
+    top: -15px;
+    left: 40px;
+}
+
+.cola>.crestas>.cresta:nth-of-type(4) {
+    top: -5px;
+    left: 30px;
+}
+
+.cola>.crestas>.cresta:nth-of-type(5) {
+    top: 2px;
+    left: 20px;
+}
+
+.cola>.crestas>.cresta:nth-of-type(6) {
+    top: 5px;
+    left: 10px;
+}
+
+.arriba {
+    border-color: var(--ojos)!important;
+    z-index: 2;
+    margin-left: 50px;
+}
+
+.abajo {
+    z-index: 1;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-bottom: 45px solid var(--piel-extra)!important;
+    border-color: var(--piel-extra)!important;
+}
+
+
+/* PATAS */
+
+.patas {
+    width: 20vh;
+    z-index: 8;
+    align-self: end;
+    justify-self: center;
+    margin-right: -80px;
+    display: flex;
+    justify-content: space-between
+}
+
+.pata {
+    background-color: var(--piel);
+    width: 50px;
+    height: 75px;
+    border-radius: 45%;
+}
+
+.pata:first-child {
+    margin-right: 50px;
+}
+
+.pie {
+    background-color: var(--piel);
+    width: 75px;
+    margin-top: 30px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.pie:nth-of-type(1) {
+    margin-left: -10px;
+}
+
+.pie:nth-of-type(2) {
+    margin-left: 20px;
+}
+
+.manos {
+    align-self: center;
+    position: absolute;
+    display: flex;
+    margin-left: 90px;
+}
+
+
+/* BRAZOS */
+
+.brazo {
+    background-color: var(--piel);
+    width: 30px;
+    height: 60px;
+    border-radius: 45%;
+    transform: rotate(90deg);
+}
+
+.brazo:nth-of-type(1) {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.brazo:nth-of-type(2) {
+    transform: rotate(110deg);
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.palma {
+    background-color: var(--piel);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 30px;
+}
+
+.palma2 {
+    background-color: var(--piel);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    margin-top: -15px;
+    margin-left: -7px;
+}
+
+.palma:nth-of-type(2) {
+    left: 200px;
+    position: absolute;
+}
+
+.brazo:first-child {
+    margin-right: 100px;
+}
